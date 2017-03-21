@@ -1,0 +1,291 @@
+* {
+  margin: 0px;
+  overflow-x: hidden !important; }
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 10;
+  justify-content: center;
+  display: flex;
+  align-items: center; 
+}
+
+.loader {
+  font-size: 4vmax; }
+
+@keyframes pushUp {
+  from {
+    top: 35%; }
+  to {
+    top: 0; } }
+@keyframes reveal {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+.header {
+  position: fixed;
+  width: 100%;
+  height: 30%;
+  top: 35%;
+  margin: auto;
+  z-index: 10;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  transition: color 1s;
+  -webkit-transition: color 1s;
+  font-family: "Raleway", "sans-serif";
+  font-size: 3.2vmax; }
+
+.header:hover {
+  color: #444; }
+
+@keyframes underline {
+  from {
+    border-color: transparent; }
+  to {
+    border-color: black; } }
+.description {
+  margin: auto;
+  width: 60vw;
+  max-width: 800px;
+  border-bottom: solid transparent 5px;
+  padding: 10px;
+  letter-spacing: 3px; 
+  font-size: 2vmax;
+}
+
+#tweets {
+  width: 70vw;
+  margin: auto;
+  margin-top: 30px;
+  bottom: 0; 
+}
+
+.tweet {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 3px black solid;
+  height: 150px;
+  position: relative;
+  transition: max-width 2s;
+  display: block; }
+
+.tweet:hover {
+  max-width: 700px;
+  border-color: #1C6E8C; }
+
+.tweet-content {
+  color: black;
+  font-family: "Raleway", "sans-serif";
+  position: absolute;
+  margin: auto;
+  width: 70%;
+  height: 50%;
+  left: 25%;
+  top: 25%;
+  font-size: 100%;
+  overflow-wrap: break-word; }
+
+.tweet-author {
+  position: absolute;
+  color: #666;
+  font-family: "Arial";
+  font-size: 80%;
+  left: 25%;
+  top: 10%;
+  right: 0;
+  height: 15%; }
+
+.profile-image {
+  position: absolute;
+  height: auto;
+  width: 16%;
+  border-radius: 20%;
+  left: 3%;
+  top: 10%; }
+
+.within-tweet-icon {
+  color: black;
+  background: none;
+  position: absolute;
+  bottom: 5%;
+  right: 5%; }
+
+.tweet-created {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: #666;
+  font-family: "Arial";
+  font-size: 80%; 
+}
+
+
+
+
+#about-button:hover {
+  text-decoration: underline; 
+}
+
+.about {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.about.open {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.about-text {
+  opacity: 0.4;
+  -webkit-transform: translateY(-25%) rotateX(35deg);
+  transform: translateY(-25%) rotateX(35deg);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  margin: 20px;
+}
+
+.open .about-text  {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+.about-text p {
+  letter-spacing: 3px; 
+  font-size: 2vmax;
+}
+
+.about-text h1 {
+  font-family: "Raleway", "sans-serif";
+  font-size: 3.2vmax; 
+}
+
+
+#close-btn {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+
+#close-btn:hover {
+  color: gray;
+}
+
+/* Start Footer */
+
+/* For mobile */
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: white;
+}
+
+#social {
+    position: fixed;
+    left: 10px;
+    bottom: 5px; 
+} 
+
+#about-button {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    font-size: 15px;
+    font-family: "Raleway", "sans-serif"; 
+}
+
+.social-icon {
+    padding: 7px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: #080A16; 
+}
+
+.social-icon:hover {
+  color: #1C6E8C; 
+}
+
+
+@media (min-width: 768px) {
+  /* For desktops*/
+  #about-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 3vh;
+    font-family: "Raleway", "sans-serif"; 
+  }
+
+  #social {
+    position: fixed;
+    left: 10px;
+    bottom: 20px; 
+  }
+
+  .social-icon {
+    padding: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: #080A16; 
+  }
+
+}
+
+
+/* End Footer */
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; 
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=styles.css.map */
